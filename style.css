@@ -1,0 +1,26 @@
+.result {
+	position: relative;
+	overflow:hidden;
+}
+.result h2, 
+.result p, 
+.result a {
+	z-index: 1;
+	position: relative;
+	color: #fff;
+	text-shadow: 0 0 0 transparent;
+}
+.result img {
+	top: 0;
+	left: 0;
+	position: absolute;
+	z-index: 0;
+	max-width:100%;
+	height:auto;
+}
+.result a {
+	margin-top: 7%;
+	display: block;
+	float: left;
+	padding-right:10px;
+}

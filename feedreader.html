@@ -1,0 +1,46 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery Mobile: Frontend WebD 1sem</title>
+	<link rel="stylesheet" href="themes/theme1.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<script>
+		// API = Facebook JSON feed script
+		// from: http://graph.facebook.com/JqueryMobilee?fref=ts
+			$(document).ready(function() {
+				$.getJSON('http://graph.facebook.com/JqueryMobilee?fref=ts', function(fbResult){
+					$('<div class="result"></div>')				
+						.append('<h2>' + fbResult.name + '</h2>')
+						.append('<img src="' + fbResult.cover.source + '">')
+						.append('<p>' + fbResult.likes + ' likes </p>')
+						.append('<a href="' + fbResult.link + '">Facebook Link</a>')
+						.append('<a href="' + fbResult.website + '">Webssite</a>')
+						.appendTo('#content');
+				});
+			});
+	</script>
+</head>
+<body>
+	<div data-role="page" data-theme="a">
+		<div data-role="header" data-position="inline">
+			<h1>Frontend - jQuery Exercise</h1>
+			<div data-role="navbar">
+			  <ul>
+			    <li><a href="/jQuery_mobile/" data-icon="home">Home</a></li>
+			    <li><a href="links.html" data-icon="arrow-r">Links</a></li>
+			    <li><a href="feedreader.html" data-icon="info">Feedreader</a></li>
+			  </ul>
+			</div>
+		</div>
+		<div id="content" data-role="content" data-theme="a">
+			
+		</div>
+	</div>
+</body>
+</html>
